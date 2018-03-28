@@ -1,0 +1,19 @@
+version: '3'
+services: 
+  web:
+    image: node:slim
+    volumes:
+      - ./:/app
+    ports:
+      - '3000:3000'
+    working_dir: /app
+    links:
+      - mongo
+    command: bash -c "npm install && npm run dev"
+  mongo:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+    command: --smallfiles

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+#logo {
+  font: 21px 'Roboto Slab';
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 100px;
+  cursor: pointer;
+  text-transform: lowercase;
+  letter-spacing: normal;
+}
+#logo a {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+#logo a:before,
+#logo a:after {
+  font-size: 25px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+#logo a:before {
+  content: '[';
+}
+#logo a:after {
+  content: ']';
+}
+#logo:hover a {
+  max-width: 250px;
+}
